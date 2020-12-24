@@ -1,6 +1,7 @@
 window.onload = () => {
     const christmasTree = document.querySelectorAll(".christmasTree");
     const tweetButton = document.getElementById("tweet");
+    tweetButton.href = `http://twitter.com/share?text=そのためのクリスマスツリー&url=${location.href}&hashtags=そのためのクリスマスツリー`;
     const loopElement = document.getElementById("loop");
     let fallDownCount = 0;
 
@@ -30,7 +31,7 @@ window.onload = () => {
             element.classList.remove("christmasTree");
     
             if (fallDownCount > 1) {
-                tweetButton.href = `http://twitter.com/share?text=そのためのクリスマスツリー - ${fallDownCount}回倒した&url=${location.href}&hashtags=そのためのクリスマスツリー`;
+                tweetButton.href = `http://twitter.com/share?text=そのためのクリスマスツリー - ${fallDownCount}本倒した&url=${location.href}&hashtags=そのためのクリスマスツリー`;
             } else {
                 tweetButton.href = `http://twitter.com/share?text=そのためのクリスマスツリー&url=${location.href}&hashtags=そのためのクリスマスツリー`;
             }
